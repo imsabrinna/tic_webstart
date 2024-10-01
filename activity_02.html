@@ -1,0 +1,17 @@
+<!-- Atividade 02
+Crie um algoritmo que leia o valor do raio e calcule a área e o perímetro do círculo correspondente.
+
+Perímetro do círculo = 2*tt*r
+Area do círculo = tt*r2 -->
+
+<meta charset="UTF-8">
+   
+    <script>
+        var raio = +prompt("Digite o valor do raio:");
+        var pi = Math.PI;
+        var perimetro = 2 * pi * raio;
+        var area = pi * Math.pow(raio, 2);
+
+        document.write("O perímetro do círculo é: " + perimetro.toFixed(2) + "<br>");
+        document.write("A área do círculo é: " + area.toFixed(2));
+    </script>

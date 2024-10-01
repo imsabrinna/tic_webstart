@@ -1,0 +1,38 @@
+<!-- Atividade 04
+
+Crie um algoritmo que leia tres valores a, b e c. Indique se a=b, a>b, c<b, c!="b. Imprima o resultado na tela. -->
+
+<meta charset="UTF-8">
+   
+    <script>
+        // Ler valores
+        var a = +prompt("Digite o valor de a:");
+        var b = +prompt("Digite o valor de b:");
+        var c = +prompt("Digite o valor de c:");
+
+        // Comparações
+        var resultado = "";
+        
+        if (a == b) {
+            resultado += "a é igual a b. \n";
+        }  else if (a > b) {
+            resultado += "a é maior que b.\n";
+        } else {
+            resultado += "a é menor que b.\n";
+        }
+
+        if (c < b) {
+            resultado += "c é menor que b.\n";
+        } else {
+            resultado += "c não é menor que b.\n";
+        }
+
+        if (c != b) {
+            resultado += "c é diferente de b.\n";
+        } else {
+            resultado += "c é igual a b.\n";
+        }
+
+        // Imprimir resultado
+        alert(resultado);
+    </script>
