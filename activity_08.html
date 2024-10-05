@@ -1,0 +1,84 @@
+<!-- Atividade 08 (Mol01 - Class02 - 04)
+
+Escreva o algoritmo "Programa Solidário". O doador deve clicar nas opções para efetuar a sua doação. Imprima o resultado na tela com o valor da doação e uma mensagem de agradecimento. Ultilize a estrutura Switch Case. 
+
+[1] para doar $10
+[2] para doar $25
+[3] para doar $50
+[4] para doar outros valores
+[5] para cancelar-->
+
+<meta charset="UTF-8">
+
+<head>
+<title>Programa Solidário</title>
+</head>
+
+<body>
+    <h1>Programa Solidário</h1>
+    <p>Selecione uma opção para doar:</p>
+    
+    <select id="opcao"> 
+        <option value="1">Doar $10</option>
+        <option value="2">Doar $25</option>
+        <option value="3">Doar $50</option>
+        <option value="4">Doar outro valor</option>
+        <option value="5">Cancelar</option>
+    </select>
+
+    <button id="botao-doacao">Efetuar Doação</button>
+    
+    <p id="resultado"></p> <!-- Parágrafo onde o resultado será exibido. -->
+
+    <script>
+        // Definindo a função doar antes de ser chamada.
+        function doar() {
+            let escolha = parseInt(document.getElementById("opcao").value); 
+            /* Obtém o valor selecionado no campo 'select' e converte para número inteiro. */
+            
+            let valorDoacao = 0; // Inicializa a variável para o valor da doação.
+            let mensagem = ""; // Variável para a mensagem final.
+
+            switch (escolha) { 
+                /* Estrutura 'switch' que verifica a opção escolhida. */
+                case 1:
+                    valorDoacao = 10; // Valor da doação é $10.
+                    mensagem = "Obrigado por doar $10!"; // Mensagem de agradecimento.
+                    break; // Encerra o bloco do case 1.
+                case 2:
+                    valorDoacao = 25; // Valor da doação é $25.
+                    mensagem = "Obrigado por doar $25!"; // Mensagem de agradecimento.
+                    break;
+                case 3:
+                    valorDoacao = 50; // Valor da doação é $50.
+                    mensagem = "Obrigado por doar $50!"; // Mensagem de agradecimento.
+                    break;
+                case 4:
+                    valorDoacao = prompt("Digite o valor que deseja doar:"); 
+                    /* Solicita ao usuário um valor personalizado. */
+                    
+                    if (isNaN(valorDoacao) || valorDoacao <= 0) { 
+                        /* Verifica se o valor é um número válido. */
+                        mensagem = "Valor inválido."; // Mensagem de erro.
+                    } else {
+                        mensagem = `Obrigado por doar $${valorDoacao}!`; 
+                        // Mensagem de agradecimento com o valor doado.
+                    }
+                    break;
+                case 5:
+                    mensagem = "Doação cancelada."; // Mensagem de cancelamento.
+                    break;
+                default:
+                    mensagem = "Opção inválida."; // Mensagem para opção não reconhecida.
+                    break;
+            }
+
+            document.getElementById("resultado").innerText = mensagem; 
+            /* Exibe a mensagem final no parágrafo com id 'resultado'. */
+        }
+
+        // Adicionando o evento de clique ao botão após a definição da função.
+        document.getElementById("botao-doacao").addEventListener("click", doar);
+    </script>
+</body>
+</html>

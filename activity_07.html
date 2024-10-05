@@ -1,0 +1,76 @@
+<!-- Atividade 07 (Mol01 - Class02 - Ativ03)
+
+Escreva um algoritmo que calcule a média de um aluno em uma disciplina e imprima o resultado.
+Durante o semestre o aluno faz 3 provas com notas de 0 a 10, é considerado aprovado, o aluno que consegue nota igual ou superior a 7.
+Menor que 7 e maior ou igual a 5, fica de recuperação. Abaixo de 5 deverá repetir o semestre. -->
+
+<meta charset="UTF-8">
+   
+    <script>
+        // Ler valores
+        let nota1 = +prompt("Digite a nota da primeira prova:");
+        let nota2 = +prompt("Digite a nota da segunda prova:");
+        let nota3 = +prompt("Digite a nota da terceira prova:");
+        let media = (nota1 + nota2 + nota3) / 3;
+
+        // Verifica se o número é positivo
+        var status = "";
+        
+        switch (true) {
+        case (media >= 7):
+            status = "Aprovado";
+            break;
+        case (media >= 5 && media < 7):
+            status = "Recuperação";
+            break;
+        case (media < 5):
+            status = "Repetir o semestre";
+            break;
+        default:
+            status = "Erro no cálculo da média.";
+    }
+
+
+        // Imprimir resultado
+        alert("Media:" + Math.round(media) + ". " + status );
+    </script>
+
+
+   
+
+
+<!-- // Função para calcular a média e determinar o status do aluno
+function calcularMedia(nota1, nota2, nota3) {
+    let media = (nota1 + nota2 + nota3) / 3;
+
+    console.log("Média do aluno: " + media.toFixed(2));
+
+    let status;
+
+    switch (true) {
+        case (media >= 7):
+            status = "Aprovado";
+            break;
+        case (media >= 5 && media < 7):
+            status = "Recuperação";
+            break;
+        case (media < 5):
+            status = "Repetir o semestre";
+            break;
+        default:
+            status = "Erro no cálculo da média.";
+    }
+
+    console.log("Status do aluno: " + status);
+}
+
+// Exemplo de leitura das notas
+let nota1 = parseFloat(prompt("Digite a nota da primeira prova:"));
+let nota2 = parseFloat(prompt("Digite a nota da segunda prova:"));
+let nota3 = parseFloat(prompt("Digite a nota da terceira prova:"));
+
+// Chama a função para calcular a média e exibir o status
+calcularMedia(nota1, nota2, nota3); -->
+
+
+    

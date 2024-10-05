@@ -1,0 +1,71 @@
+<!-- Challenge 01
+
+Faça um programa que leia 4 valores: I, n1, n2 e n3. Sabe-se que I é um número inteiro e positivo e n1, n2 e n3 são quaisquer valores reais. O programa deve escrever os valores lidos e:
+
+Se I = 1, escrever os 3 valores em ordem crescente;
+Se I = 2, escrever os 3 valores em ordem decrescente;
+Se I = 3, escrever os 3 valores de forma que o maior valor fique entre os outros dois;
+
+Se I não for 1 dos 3 valores acima, imprima uma mensagem indicando este comportamento. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa com 4 valores</title>
+    <script>
+        function processarValores() {
+            // Leitura dos valores
+            var I = parseInt(document.getElementById("inputI").value);
+            var n1 = parseFloat(document.getElementById("inputN1").value);
+            var n2 = parseFloat(document.getElementById("inputN2").value);
+            var n3 = parseFloat(document.getElementById("inputN3").value);
+
+            // Exibe os valores lidos
+            var output = "Valores lidos:<br>" + "I: " + I + "<br>" + "n1: " + n1 + "<br>" + "n2: " + n2 + "<br>" + "n3: " + n3 + "<br><br>";
+
+            // Verificação das condições baseadas no valor de I
+            if (I === 1) {
+                // Ordem crescente
+                var valores = [n1, n2, n3].sort((a, b) => a - b);
+                output += "Valores em ordem crescente: " + valores.join(", ");
+            } else if (I === 2) {
+                // Ordem decrescente
+                var valores = [n1, n2, n3].sort((a, b) => b - a);
+                output += "Valores em ordem decrescente: " + valores.join(", ");
+            } else if (I === 3) {
+                // Maior valor entre os outros dois
+                var maior = Math.max(n1, n2, n3);
+                var menores = [n1, n2, n3].filter(v => v !== maior);
+                output += "Valores com o maior entre os outros dois: " + menores[0] + ", " + maior + ", " + menores[1];
+            } else {
+                // Caso I seja inválido
+                output += "Valor de I inválido. Por favor, insira 1, 2 ou 3.";
+            }
+
+            // Exibir resultado
+            document.getElementById("resultado").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <h1>Programa com 4 valores</h1>
+    
+    <label for="inputI">Digite o valor de I (inteiro e positivo):</label>
+    <input type="number" id="inputI"><br><br>
+    
+    <label for="inputN1">Digite o valor de n1:</label>
+    <input type="number" id="inputN1" step="any"><br><br>
+
+    <label for="inputN2">Digite o valor de n2:</label>
+    <input type="number" id="inputN2" step="any"><br><br>
+
+    <label for="inputN3">Digite o valor de n3:</label>
+    <input type="number" id="inputN3" step="any"><br><br>
+
+    <button onclick="processarValores()">Processar</button>
+
+    <div id="resultado"></div>
+</body>
+</html>

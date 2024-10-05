@@ -1,0 +1,46 @@
+<!-- Atividade 06 (Mol01 - Class02 - Ativ02)
+
+Faça um algoritmo que receba o valor do salário de uma pessoa e o valor de um financiamento pretendido. Caso o financiamento seja menor ou igual a 5 vezes o salário da pessoa, o algoritmo deverá escrever "Financiamento Negado", se não, ele deverá escrever "Financiamento Aceito". Independente de condecer ou não o financiamento, o algoritmo escreverá depois a frase "Obrigado por nos consultar!". -->
+
+<meta charset="UTF-8">
+   
+    <script>
+        // Ler valores
+        let salario = (prompt("Digite o seu salário:"));
+        let financiamento = (prompt("Digite o valor do financiamento:"));
+
+        // Verifica se o financiamento pode ser aceito
+        var resultado = "";
+        
+        if (financiamento >= (5*salario)) {
+            resultado += "Financiamento Negado. \n";
+        } else {
+            resultado += "Financiamento Aceito.\n";
+        }
+
+        // Imprimir resultado
+        alert(resultado);
+        alert("Obrigada por nos consultar!");
+    </script>
+
+
+<!-- <script>
+// Função para verificar o financiamento
+function verificarFinanciamento(salario, financiamento) {
+    if (financiamento > 5 * salario) {
+        console.log("Financiamento Negado");
+    } else {
+        console.log("Financiamento Aceito");
+    }
+    console.log("Obrigado por nos consultar!");
+}
+
+// Exemplo de leitura dos valores
+let salario = parseFloat(prompt("Digite o valor do salário:"));
+let financiamento = parseFloat(prompt("Digite o valor do financiamento pretendido:"));
+
+// Chama a função para verificar o financiamento
+verificarFinanciamento(salario, financiamento);
+</script> -->
+
+    

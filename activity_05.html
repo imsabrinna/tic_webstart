@@ -1,0 +1,24 @@
+<!-- Atividade 05 (Mol01 - 02.01)
+
+Escreva um programa que leia um número inteiro. Se o número lido for positivo, escreva uma mensagem indicando se ele é par ou ímpar. Se o número for negativo, escreva a seguinte mensagem "Este número não é posivito". -->
+
+<meta charset="UTF-8">
+   
+    <script>
+        // Ler valores
+        let numero = parseInt(prompt("Digite um número inteiro:"));
+
+        // Verifica se o número é positivo
+        var resultado = "";
+        
+        if (numero % 2 === 0) {
+            resultado += "Seu número é positivo. \n";
+        } else {
+            resultado += "Seu número é negativo.\n";
+        }
+
+
+        // Imprimir resultado
+        alert(resultado);
+    </script>
+    

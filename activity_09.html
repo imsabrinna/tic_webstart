@@ -1,0 +1,44 @@
+<!-- Atividade 09 (Mol01 - Class02 - 05)
+
+Escreva um algoritmo que calcule o IMC de uma pessoa e imprima a situação em que ela se encontra:
+
+IMC - Classficação
+< 16 - Magreza Grave
+16 a < 17 - Magreza Moderada
+17 a < 18.5 - Magreza Leve
+18.5 a <25 - Saudavel
+25 a <30 - Sobrepeso
+30 a < 35  - Obesidade I
+35 a < 40  - Obesidade II
+>= 40 - Obesidade III -->
+
+<meta charset="UTF-8">
+   
+    <script>
+        // Ler valores
+        let nota1 = parseFloat(prompt("Digite a nota da primeira prova:"));
+        let nota2 = parseFloat(prompt("Digite a nota da segunda prova:"));
+        let nota3 = parseFloat(prompt("Digite a nota da terceira prova:"));
+        let media = (nota1 + nota2 + nota3) / 3;
+
+        // Verifica se o número é positivo
+        var status = "";
+        
+        switch (true) {
+        case (media >= 7):
+            status = "Aprovado";
+            break;
+        case (media >= 5 && media < 7):
+            status = "Recuperação";
+            break;
+        case (media < 5):
+            status = "Repetir o semestre";
+            break;
+        default:
+            status = "Erro no cálculo da média.";
+    }
+
+    
+        // Imprimir resultado
+        alert("Media:" + Math.round(media) + ". " + status );
+    </script>
