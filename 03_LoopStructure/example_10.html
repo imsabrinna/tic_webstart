@@ -1,0 +1,14 @@
+<!-- Exemplo de um laço infinito. A inicialização da variável Contador deveria ser feita antes do comando Do..While. -->
+
+<meta charset="UTF-8">
+<script>
+    alert("Contador de números!");
+
+    var soma = 1; // Consertando laço infinito.
+    do {
+        soma = soma + 1;
+    // } while (soma = 10); Laço infinito.
+    } while (soma == 10); // Consertando laço infinito, necessário usar "==" para comparação. "=" representa atribuição, é necessário ter uma comparação na expressão lógica.
+    document.write(soma + "<br>");
+
+</script> 

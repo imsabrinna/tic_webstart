@@ -1,0 +1,15 @@
+<!-- Escreva um algoritmo que leia um dado número e imprima na tela sua tabuada. -->
+<meta charset="UTF-8">
+
+<script>
+    alert("Tabuadas!");
+    var contador = 1;
+    var numero = +prompt("Tabuada do número: ");
+    
+    do {
+        var multi = contador*numero
+        document.write(numero + " x " + contador + " = " + multi + "<br>");
+        contador = contador + 1;
+    } while (contador <= 10);
+</script>
+

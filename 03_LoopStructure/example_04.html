@@ -1,0 +1,18 @@
+<!-- Escreva um algoritmo que o usuário digite a quantidade de númeors que ele deseja somar. Faça com que o programa leia esses números e no final apresente o resultado da soma. -->
+
+<meta charset="UTF-8">
+
+<script>
+    alert("Contador de números!");
+    var numero;
+    var contador = 1;
+    var soma = 0;
+    var quantidade = +prompt("A quantidade de números voce deseja contar?");
+
+    while (contador <= quantidade){
+        var numero = +prompt("Digite o " + contador + "o. número: ");
+        soma = soma + numero;
+        contador = contador + 1;
+    }
+    document.write("A soma dos números é " + soma);
+</script>
