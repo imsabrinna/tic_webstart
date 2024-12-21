@@ -1,0 +1,24 @@
+<!-- Exemplo 1
+Um programa que imprima a idade de algumas pessoas, inicialmente estava aplicado uma tag <br> para quebra de linha, porém sabemos que para alterações em grandes projetos é melhor criar uma função para essa quebra de linha, para que ela possa ser alterada facilmente. -->
+
+<meta charset="UTF-8">
+   
+    <script>
+        alert("Analisador de idades!")
+        
+        function saltoLinha() {
+            document.write("<br>");
+        }
+
+        var ano = 2024
+
+        document.write("José tem " + (ano - 1990) + " anos.");
+        saltoLinha();
+        document.write("Maria tem " + (ano - 1993) + " anos.");
+        saltoLinha();
+        document.write("Pedro tem " + (ano - 1997) + " anos.");
+        saltoLinha();
+        
+    </script>
+
+

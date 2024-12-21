@@ -1,0 +1,54 @@
+<!-- Exemplo 3
+ Encontrar a solução de uma raiz quadrada é encontrar os possíveis valores de x. O valor delta influencia totalmente no resultado final
+ 
+ delta < 0 : não possui raízes reais.
+ delta = 0 : possui apenas uma raiz.
+ delta > 0 : possui duas raízes.
+ 
+ Faça um programa que encontre as raízes. Faça delta como uma função.
+ -->
+
+ <meta charset="UTF-8">
+   
+ <script>
+     alert("Cálculo da equação de 2 grau!")
+     
+     function saltoLinha() {
+         document.write("<br>");
+     }
+
+     function calculaDelta(a,b,c) {
+         return (b*b - 4*a*c);
+     }
+
+     var a = +prompt("De um valor para a:");
+     var b = +prompt("De um valor para b:");
+     var c = +prompt("De um valor para c:");
+
+     var delta = calculaDelta(a,b,c);
+     document.write("O valor de delta é " + delta);
+     saltoLinha();
+
+     if (delta < 0) {
+        document.write("Essa equação não possui raízes reais!");
+     } else {
+        if (delta == 0) {
+            var raiz1 = (-b + Math.sqrt(delta))/(2*a);
+            document.write("Essa equação possui apenas 1 raíz!");
+        } else {
+            var raiz1 = (-b + Math.sqrt(delta))/(2*a);
+            var raiz2 = (-b - Math.sqrt(delta))/(2*a);
+            document.write("Essa equação possui 2 raízes!");
+        }
+     }
+
+     document.write("José tem " + (ano - 1990) + " anos.");
+     saltoLinha();
+     document.write("Maria tem " + (ano - 1993) + " anos.");
+     saltoLinha();
+     document.write("Pedro tem " + (ano - 1997) + " anos.");
+     saltoLinha();
+     
+ </script>
+
+
